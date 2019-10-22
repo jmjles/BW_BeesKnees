@@ -7,6 +7,8 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
+# path must be set to local path
+#TODO: Figure out how to make a raw URL for multiple csv file import
 path = r'/Users/ericrivetna/Desktop/BW_BeesKnees/csv_import'
 
 df = pd.concat(map(pd.read_csv, glob.glob(path + '/*.csv')),
