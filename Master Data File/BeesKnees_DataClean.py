@@ -1,18 +1,7 @@
 import os
-import sys
 import glob
-import pickle
-import json
-import csv
-import sqlite3
-import sqlalchemy
 import pandas as pd
-import pandas.io.sql as psql
-from pprint import pprint
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
-import seaborn as sns
 
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
