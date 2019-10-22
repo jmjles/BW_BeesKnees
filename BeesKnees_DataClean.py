@@ -18,7 +18,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-path = r'/Users/ericrivetna/Desktop/BW_BeesKnees/Import Folder'
+path = r'/Users/ericrivetna/Desktop/BW_BeesKnees/csv_import'
 
 df = pd.concat(map(pd.read_csv, glob.glob(path + '/*.csv')),
                sort=True, ignore_index=True).reset_index()
@@ -27,6 +27,7 @@ cols = ['state', 'year', 'quarter', 'starting_pop',
         'max_pop', 'pop_lost', 'percent_lost', 'pop_gained',
         'pop_renovated', 'percent_renovated', 'varroa_mites',
         'other_pests', 'diseases', 'pesticides', 'other', 'unknown']
+
 df.replace(np.NaN, '2015', inplace=True)
 df.replace('2015', 2015, inplace=True)
 df.sort_values(['year', 'quarter'], inplace=True)
